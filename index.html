@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main-css/index.css">
+    <link rel="stylesheet" href="assets/css/main-css/button.css">
+    <link rel="stylesheet" href="assets/css/main-css/records.css">
+    <link rel="stylesheet" href="assets/css/main-css/modal.css">
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/autenticacao.js"></script>
+    <title>Stock Master</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Stock Master</h1>
+        <button id="btnlogout" onclick="sair()">Sair</button>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Nova Venda</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Valor Unitário</th>
+                    <th>Quantidade</th>
+                    <th>Valor Total</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Nova Venda</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto"
+                        required>
+                    <input type="text" id="email" class="modal-field" placeholder="Valor Unitário" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Quantidade" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Valor Total" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
